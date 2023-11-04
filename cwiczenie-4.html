@@ -5,7 +5,8 @@
 
 	<meta charset="utf-8">
 	<title>4 - Instrukcja warunkowa w JavaScript</title>
-	<link href="arkusz-cwiczenia.css" rel="stylesheet">
+	<link rel="stylesheet" href="style.css">
+
 	
 </head>
 
@@ -26,9 +27,23 @@
 			var a = document.getElementById('a').value;
 			var b = document.getElementById('b').value;
 			var c = document.getElementById('c').value;
-			
-			
-		}
+			let wynik = document.getElementById("wynik");
+            
+             wynik.innerHTML= "Najmniejsza liczba to: " + Math.min(a,b,c) + "<br>" + "Największa liczba to: " + Math.max(a,b,c) + "<br>" + "Wartosc bezwzgledna z kazdej liczby to: " + Math.abs(a) + " " + Math.abs(b) + " " + Math.abs(c);
+          
+            
+                if (a % 2 == 0) {
+				wynik.innerHTML += "<br>a jest liczbą parzystą";
+			    }
+                 if (b % 2 == 0) {
+				wynik.innerHTML += "<br>b jest liczbą parzystą";
+			    }
+                if (c%2 == 0){
+                    wynik.innerHTML +="<br>c jest liczba parzystą";
+                }
+        }
+
+
 
 	</script>
 
