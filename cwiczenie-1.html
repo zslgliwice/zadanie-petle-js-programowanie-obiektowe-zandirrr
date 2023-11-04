@@ -1,31 +1,69 @@
 <!DOCTYPE html>
-<html lang="pl">
-
+<html lang="en">
 <head>
-
-	<meta charset="utf-8">
-	<title>1 - Instrukcja warunkowa w JavaScript</title>
-	<link href="arkusz-cwiczenia.css" rel="stylesheet">
-	
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
 	<label>
-		Podaj numer dnia tygodnia: <input type="number">
+		Podaj numer dnia tygodnia: <input type="number" id="sss">
 	</label>
 	
-	<input type="submit" value="Zobacz nazwę dnia" onclick="getDayName()">
+	<input type="submit" value="Zobacz nazwę dnia" id="ss" onclick="getDayName()">
 
 	<div id="wynik"></div>
 	
-	<script>
-	
+    <script>
+	    
+
 		function getDayName()
 		{
-					
-			
+           let dzien = document.getElementById("sss").value;
+           let wynik = document.getElementById("wynik");
+
+           
+       
+       switch(dzien){
+        case "1":
+        wynik.innerHTML="Pierwszy dzień tygodnia to Monday - poniedziałek";
+        break;
+       
+       case "2":
+       wynik.innerHTML ="Drugi dzień tygodnia to Tuesday - wtorek";
+       break;
+
+       case "3":
+       wynik.innerHTML = "Trzeci dzień tygodnia to Wednesday - środa";
+        break;
+
+        case "4":
+        wynik.innerHTML = "Czwarty dzień tygodnia to Thursday - czwartek";
+        break;
+
+        case "5":
+            wynik.innerHTML = "Piaty dzień tygodnia to Friday - piątek, piąteczek, piątunio";
+            wynik.style.color="yellow";
+        break;
+
+        case "6":
+        wynik.innerHTML = "Szósty dzień tygodnia to Saturday - sobota";
+        wynik.style.color="green";
+        break;
+
+        case "7":
+            wynik.innerHTML = "Siódmy dzień tygodnia to Sunday - niedziela"
+            wynik.style.color = "green";
+            break;
+       }
+       if(dzien<1 || dzien > 7){
+        wynik.innerHTML = "To nie jest prawidłowy numer dnia tygodnia!";
+        wynik.style.color = "red";
 		}
+    }
 
 	</script>
 
