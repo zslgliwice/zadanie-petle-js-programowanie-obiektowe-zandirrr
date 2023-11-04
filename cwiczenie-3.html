@@ -5,7 +5,8 @@
 
 	<meta charset="utf-8">
 	<title>3 - Instrukcja warunkowa w JavaScript</title>
-	<link href="arkusz-cwiczenia.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+
 	
 </head>
 
@@ -18,11 +19,32 @@
 	<div id="wynik"></div>
 	
 	<script>
-	
+		            
 		function ktora_cwiartka()
 		{
-			
-			
+		
+           let x = document.getElementById("x").value;
+            let y = document.getElementById("y").value;
+            let wynik = document.getElementById("wynik");
+             if(x == 15 && y == 96){
+                wynik.innerHTML = "René Descartes urodził się 31 marca 1596 w La Haye en Touraine, Francja. Był synem Joachima Descartesa, prawnika i urzędnika miejskiego, oraz Jeanne Brochard. Studiował w kolegium jezuickim w La Flèche, a później kontynuował naukę prawa na Uniwersytecie w Poitiers, uzyskując stopień magistra w 1616 roku. W wieku 21 lat dołączył do armii holenderskiej, gdzie nawiązał kontakty z uczonymi i zainteresował się matematyką i naukami przyrodniczymi. Po odejściu z wojska w 1621 roku osiedlił się w Paryżu, gdzie poświęcił się badaniom naukowym i rozpoczął pisanie swoich znaczących dzieł filozoficznych. W latach 1628-1649 mieszkał głównie w Holandii, gdzie powstały jego najważniejsze prace, takie jak Rozważania nad metodą i Medytacje o pierwszej filozofii. Jego filozofia, oparta na zasadzie Cogito, ergo sum(Myślę, więc jestem), była przełomowa w dziejach filozofii i nauki. W 1649 roku przyjął zaproszenie szwedzkiej królowej Krystyny i udał się do Sztokholmu, aby nauczać ją filozofii. Niestety, zmarł na zapalenie płuc 11 lutego 1650. Jego myśli i prace miały ogromny wpływ na rozwój filozofii, matematyki i nauki nowożytnej epoki. Descartes jest uważany za jednego z najważniejszych filozofów w historii."
+            }
+            else if(x >0 && y >0){
+                wynik.innerHTML = "I ćwiartka"
+            }
+            else if(x <0 && y >0){
+                wynik.innerHTML = "II ćwiartka"
+            }
+            else if(x <0 && y <0){
+                wynik.innerHTML = "III ćwiartka"
+            }  
+             else if(x >0 && y <0){
+                wynik.innerHTML = "IV ćwiartka"
+            }
+            else if(x == 0 && y == 0){
+                wynik.innerHTML = "Punkt P(0,0) jest początkiem ukladu wspólrzędnych"
+            }
+            
 		}
 
 	</script>
