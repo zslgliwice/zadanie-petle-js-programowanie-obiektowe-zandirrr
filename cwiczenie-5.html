@@ -5,7 +5,8 @@
 
 	<meta charset="utf-8">
 	<title>5 - Instrukcja warunkowa w JavaScript</title>
-	<link href="arkusz-cwiczenia.css" rel="stylesheet">
+	<link rel="stylesheet" href="style.css">
+
 	
 </head>
 
@@ -22,8 +23,14 @@
 		function teleturniej()
 		{
 			var lucky = Math.floor(Math.random() * 3) + 1;
-			
-		}
+			var bramka = document.getElementById("bramka").value;
+            let wynik = document.getElementById("wynik");
+            let wynik_losu;
+            
+          
+            wynik_losu = (lucky==bramka)? "Hurra! w bramce nr " + bramka + " jest samochód"  : "Niestety! Samochód znajdował się w bramce nr " + lucky
+            wynik.innerHTML = wynik_losu; 
+		}   
 
 	</script>
 
