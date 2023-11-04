@@ -5,7 +5,8 @@
 
 	<meta charset="utf-8">
 	<title>2 - Instrukcja warunkowa w JavaScript</title>
-	<link href="arkusz-cwiczenia.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+
 	
 </head>
 
@@ -17,16 +18,34 @@
 	<input type="submit" value="Sprawdź udział" onclick="sprawdz()">
 
 	<div id="wynik"></div>
-	
-	<script>
-	
-		function sprawdz()
-		{
-			
-			
-		}
 
-	</script>
+    <script>
+        
+        function sprawdz(){
+           var wiek = document.getElementById("wiek").value;
+           let imie = document.getElementById("imie").value;
+           let wynik = document.getElementById("wynik");
+            
+            if(wiek < 16){
+                wynik.innerHTML = "Nie mozesz wziac udzialu"
+            }
+            else if(wiek == 16 || wiek == 17){
+                wynik.innerHTML = "Mozesz ale z opiekunem cena: 12zl"
+            }
+            else if(wiek >= 18){
+                wynik.innerHTML = "Mozesz cena to: 18zl"
+            }
+             if(wiek >= 18 && imie =="Morgan"){
+                wynik.innerHTML = "Mozesz za darmo";
+            }
+            else if(wiek >= 18 && imie =="Brad"){
+                wynik.innerHTML ="Mozesz za darmo";
+            }
 
-</body>
-</html>
+        }
+
+
+    </script>
+    </body>
+    </html>
+    
